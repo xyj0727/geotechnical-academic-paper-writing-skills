@@ -1,0 +1,4 @@
+interface:
+  display_name: "岩土论文写作技巧"
+  short_description: "从本地岩土文献提炼论证、验证、结果讨论和结论写法，保留适用范围与证据边界"
+  default_prompt: "使用 $geotech-paper-writing 根据我的研究证据撰写或修改岩土工程学术论文。"

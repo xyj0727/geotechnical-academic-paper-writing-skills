@@ -1,0 +1,4 @@
+interface:
+  display_name: "岩土论文图表模板"
+  short_description: "为岩土论文选择函数曲线、多面板、剖面及表格模板，并生成可复用图表"
+  default_prompt: "使用 $geotech-figure-table-templates 按我的真实数据制作岩土论文曲线图和表格。"

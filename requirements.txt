@@ -1,0 +1,8 @@
+# Plot templates
+numpy
+matplotlib
+# Local corpus inventory and review tools
+pymupdf
+pillow
+# Skill/package checks
+pyyaml
