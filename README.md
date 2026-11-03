@@ -50,6 +50,6 @@ Office文件使用OfficeCLI；Word/PowerPoint公式编辑使用MathType MCP并�
 
 `tools/inventory_corpus.py` 用于重新清点同级 `literature` 并提取本地审阅文本；`tools/render_review.py`用于审阅原文页；`tools/package_evidence.py`汇编已完成人工阅读的笔记；`tools/build_examples.py`重建演示图。自动提取不等于阅读，新增文献须补独立笔记及实际视觉记录后才能标为完成。
 
-本次交付是本地Git仓库，未发布远程、未安装到全局skill目录。以后若安装/发布，按用户指定的Codex兼容方式进行；不要手动复制到全局目录或自行包装本地插件源绕过安装流程。
+GitHub仓库：[xyj0727/geotechnical-academic-paper-writing-skills](https://github.com/xyj0727/geotechnical-academic-paper-writing-skills)，创建时设为私有。尚未安装到全局skill目录。以后若安装，按用户指定的Codex兼容方式进行；不要手动复制到全局目录或自行包装本地插件源绕过安装流程。
 
 验证记录见 [VALIDATION.md](VALIDATION.md)。
