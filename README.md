@@ -52,12 +52,12 @@ Office文件使用OfficeCLI；Word/PowerPoint公式编辑使用MathType MCP并�
 
 `tools/inventory_corpus.py` 增量清点同级 `literature` 并提取本地审阅文本，保留已有ID及记录，可用 `--added-date YYYY-MM-DD` 限定新文件；`tools/render_review.py`用于审阅原文页；`tools/package_evidence.py`汇编已完成人工阅读的笔记；`tools/build_examples.py`重建演示图。自动提取不等于阅读，新增文献须补独立笔记及实际视觉记录后才能标为完成。
 
-GitHub仓库：[xyj0727/geotechnical-academic-paper-writing-skills](https://github.com/xyj0727/geotechnical-academic-paper-writing-skills)，创建时设为私有。源码 checkout 与全局安装分开管理。仓库未提供 plugin 安装方式，按 Codex 兼容的 npx 流程安装两个 skill：
+GitHub仓库：[xyj0727/geotechnical-academic-paper-writing-skills](https://github.com/xyj0727/geotechnical-academic-paper-writing-skills)，现为公开仓库，可直接浏览、克隆和安装。源码 checkout 与全局安装分开管理。仓库未提供 plugin 安装方式，按 Codex 兼容的 npx 流程安装两个 skill：
 
 ```powershell
 npx --yes skills add https://github.com/xyj0727/geotechnical-academic-paper-writing-skills -g -a codex -y --copy
 ```
 
-私有仓库需已有 GitHub 访问权限。npx 安装不会自动更新，后续使用 `npx skills update -g`；安装/更新后重启 Codex 加载。不要手动复制到全局目录或自行包装本地插件源绕过安装流程。
+浏览和克隆本仓库无需申请访问权限，安装需先准备 Git 与 Node.js/npm（含 npx）。npx 安装不会自动更新，后续使用 `npx skills update -g`；安装/更新后重启 Codex 加载。不要手动复制到全局目录或自行包装本地插件源绕过安装流程。
 
 验证记录见 [VALIDATION.md](VALIDATION.md)。
