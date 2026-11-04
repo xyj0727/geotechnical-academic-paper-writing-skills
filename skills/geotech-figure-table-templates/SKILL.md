@@ -11,6 +11,7 @@ description: "Create source-grounded geotechnical paper figures and tables: load
 
 - 选择图型及文献依据：[figure-recipes.md](references/figure-recipes.md)。
 - 表格结构、三线表和多级表头：[table-recipes.md](references/table-recipes.md)。
+- 运动模式矩阵、理论线与数值样本包络、成对分组表头：[mode-envelope-styles.md](references/mode-envelope-styles.md)。
 - 数据输入和脚本使用：[data-contract.md](references/data-contract.md)。
 - 查找某篇样式：[source-atlas.md](references/source-atlas.md)，然后按需读证据卡。
 
@@ -19,7 +20,7 @@ description: "Create source-grounded geotechnical paper figures and tables: load
 确认数据文件、物理量、单位、测点、基线、归一化式、加载顺序及目标版宽。资料已给出的直接使用。缺少真实数据时可制作标明“演示数据”的模板，不把演示曲线当研究结果。
 
 1. 按问题选择响应、剖面、循环、参数矩阵、包络或验证图。不同土类/加载路径优先分面；同一组跨图保持相同颜色与符号。
-2. 实测数据用符号，计算/解析曲线用线，必要时叠加；图例说明来源。误差棒只来自真实重复试验或已定义的不确定度。
+2. 按数据来源分配线与点：实测点或离散数值样本可用符号，连续计算/解析关系用线，必要时叠加；图例明确来源，不把所有数值结果强制画成连续线。误差棒只来自真实重复试验或已定义的不确定度。
 3. 保留数据顺序。滞回环和包络不能按x自动排序；缺失点断开；提前停止不外推；不为“平滑”移动峰值或生成未测点。
 4. 量纲写在轴或列头；无量纲量注明分母。深度通常向下但按数据约定确认，负高程不能再盲目倒轴。对数轴不得吞掉零/负值。
 5. 在最终版宽检查标签、图例、黑白辨识、面板量程和线条清晰度；检查图题所说变量与轴相符。

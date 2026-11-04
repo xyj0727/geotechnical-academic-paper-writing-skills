@@ -13,6 +13,7 @@ description: "Draft and revise geotechnical research papers using source-grounde
 
 - 组织全文或引言：读 [argument-patterns.md](references/argument-patterns.md)。
 - 写方法、验证或机理：读 [evidence-and-comparisons.md](references/evidence-and-comparisons.md)。
+- 写运动模式、组合荷载包络或改进方案对照：读 [mechanism-and-envelope-writing.md](references/mechanism-and-envelope-writing.md)。
 - 改具体句段：读 [sentence-patterns.md](references/sentence-patterns.md)。
 - 寻找相似论文：在 [source-atlas.md](references/source-atlas.md) 按研究类型选文，再读相应证据卡。
 - 从零搭框架：使用 [manuscript-outline.md](assets/manuscript-outline.md)，按现有证据删改，不能把空位填成虚构结果。

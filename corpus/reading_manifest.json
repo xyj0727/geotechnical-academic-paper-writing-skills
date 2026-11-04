@@ -3,23 +3,25 @@
   "scope": "local_source_files_and_original_reading_notes",
   "page_numbering": "one_based_pdf_pages",
   "summary": {
-    "pdf_files": 107,
-    "unique_pdf_byte_files": 82,
+    "pdf_files": 112,
+    "unique_pdf_byte_files": 87,
     "byte_duplicate_pdf_files": 25,
+    "content_duplicate_byte_files": 2,
     "translation_derivative_byte_files": 26,
-    "original_source_byte_files": 56,
+    "original_source_byte_files": 59,
     "excluded_nonpaper_source_files": 1,
-    "paper_report_thesis_source_files": 55,
-    "reading_complete_sources": 55,
+    "paper_report_thesis_source_files": 58,
+    "reading_complete_sources": 58,
     "pending_ids": [],
     "partial_ids": [],
-    "total_source_pdf_pages": 1329,
-    "text_pages_recorded": 1315,
-    "visual_text_pages_recorded": 6,
-    "visual_pages_recorded": 315,
+    "total_source_pdf_pages": 1360,
+    "text_pages_recorded": 1346,
+    "visual_text_pages_recorded": 20,
+    "visual_pages_recorded": 343,
     "blank_or_separator_pages_recorded": 8,
     "auxiliary_files": 66,
-    "all_files": 173,
+    "all_files": 178,
+    "unlisted_pdf_files": 1,
     "auxiliary_formats": {
       "csv": 4,
       "docx": 1,
@@ -59,7 +61,105 @@
     "P039": "P014",
     "P040": "P014"
   },
-  "counting_note": "55份论文/报告/学位原始来源文件；P063包含原文及讨论答复，来源数不等于严格文章篇数。",
+  "content_duplicate_to_original": {
+    "P084": "P083",
+    "P087": "P086"
+  },
+  "content_duplicate_evidence": {
+    "P084": {
+      "method": "normalized_text_and_page_pixels",
+      "render_dpi": 144,
+      "colorspace": "RGB",
+      "alpha": false,
+      "source_sha256": "4ffb8eac6286adc2636daae25c75d326fdcd8ac1ffd07b8b6e2cac1f544dfa6a",
+      "target_sha256": "ddb437bf1ea42f9e2e3627b331d7a766af1231b115a0fa739b4f77028fc415df",
+      "page_render_sha256": [
+        "54eeead81f12b4a6aa0885e25b66ecde6f813baa7f4972cf259af55c20ffc30b",
+        "aa13c969a528e46100bbc5618a6831c883aa1a09110bf87695594e605f38e601",
+        "2aee112b257c367be57d2055057f47678ea1fa034ec3ddf6e294f68f5958d8d3",
+        "4e73344a3a84cb0791ee8f9eb58634bd1c3d559ebbf82bb0f5232b97f5a40186",
+        "2045b42b583dcc992f90f01b5546d1c24a52e441774f90f209511abd3122fbf7",
+        "fd9296e58e2e225e8da7ad8c87814f33a7a88d025ba1bd214269e4ed3a218183",
+        "6aee4251c9432126af174575aa916c9d7a53888845555ab6be7511b4c04c1fcd",
+        "581cd549b77e26c660cec5b1441fa14d9876a6b27370c88bece250c417ae4c06",
+        "41bafc1f56b3cacbc218000fbbafb8ea75ce5d551d6c6e5bb096a3381aa84423",
+        "b3e18f171a34b9e2a8cb8aeb51db9879a963780c2cd73ae46629d31bfef1a1eb",
+        "ab3e8e32b38541c19d30402d3543479193535ea63882bc87686c35af18b60e94",
+        "709aa22e62a16807ad3b1d660b38f36218f7fd883b9d385af7073bb10f6ff7cb",
+        "942c1c65f5a8bee976a1fb97f15d71f1a20ce732dececaf5265a975dad09fed5",
+        "3420433c5cd53e005dc4542833233d8acf6e0cbc1d2ab5f0486efd701e594db7"
+      ],
+      "target_page_render_sha256": [
+        "54eeead81f12b4a6aa0885e25b66ecde6f813baa7f4972cf259af55c20ffc30b",
+        "aa13c969a528e46100bbc5618a6831c883aa1a09110bf87695594e605f38e601",
+        "2aee112b257c367be57d2055057f47678ea1fa034ec3ddf6e294f68f5958d8d3",
+        "4e73344a3a84cb0791ee8f9eb58634bd1c3d559ebbf82bb0f5232b97f5a40186",
+        "2045b42b583dcc992f90f01b5546d1c24a52e441774f90f209511abd3122fbf7",
+        "fd9296e58e2e225e8da7ad8c87814f33a7a88d025ba1bd214269e4ed3a218183",
+        "6aee4251c9432126af174575aa916c9d7a53888845555ab6be7511b4c04c1fcd",
+        "581cd549b77e26c660cec5b1441fa14d9876a6b27370c88bece250c417ae4c06",
+        "41bafc1f56b3cacbc218000fbbafb8ea75ce5d551d6c6e5bb096a3381aa84423",
+        "b3e18f171a34b9e2a8cb8aeb51db9879a963780c2cd73ae46629d31bfef1a1eb",
+        "ab3e8e32b38541c19d30402d3543479193535ea63882bc87686c35af18b60e94",
+        "709aa22e62a16807ad3b1d660b38f36218f7fd883b9d385af7073bb10f6ff7cb",
+        "942c1c65f5a8bee976a1fb97f15d71f1a20ce732dececaf5265a975dad09fed5",
+        "3420433c5cd53e005dc4542833233d8acf6e0cbc1d2ab5f0486efd701e594db7"
+      ]
+    },
+    "P087": {
+      "id": "P087",
+      "canonical_id": "P086",
+      "source_sha256": "0e5f0d424b8a13aa7a2250d0a6da731781c7fd21dd3d159e427774fe30e2c6f8",
+      "canonical_sha256": "df8db2f86920ebd62e1ae1ea18aa2555ab28fb4652f1c49239c8dd2581facaee",
+      "review_status": "confirmed",
+      "reason": "两份文件全文规范化文字一致，11 页正文像素一致；页面差异仅为中国知网页脚水印的字体/URL。主代理实际查看两版 PDF 第 3 页确认差异性质。本映射仅适用于以上两个精确散列，不授权自动忽略其他 PDF 页脚。",
+      "visual_review": {
+        "reviewed_on": "2026-11-04",
+        "reviewer": "main_agent",
+        "visually_inspected_pdf_pages": [
+          3
+        ],
+        "render_dpi": 144,
+        "colorspace": "RGB",
+        "alpha": false,
+        "page_count": 11,
+        "machine_compared_pdf_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "all_page_sizes_points": [
+          612.280029296875,
+          858.9000244140625
+        ],
+        "all_page_difference_bboxes_pixels": [
+          42,
+          1657,
+          410,
+          1683
+        ],
+        "body_comparison_excluded_bottom_pixels": 75,
+        "all_page_body_pixels_equal": true,
+        "all_page_differences_confined_to_footer": true,
+        "scope_note": "正文一致来自逐页机器像素核对；视觉阅读页数只记录实际查看的第 3 页，不将 11 页机器比对表述为人工逐页阅读。"
+      }
+    }
+  },
+  "unlisted_pdf_paths": [
+    "other/gelagoti2018.pdf"
+  ],
+  "excluded_auxiliary_directories": [
+    "skill_review_20261104"
+  ],
+  "counting_note": "58份论文/报告/学位原始来源文件；P063包含原文及讨论答复，来源数不等于严格文章篇数。",
   "coverage_note": "read_complete只表示文本/图像文字/空白分隔页已解释全部PDF页；visual_pages另记实际图表检查，不表示重推全部公式或核实全部参考文献。",
   "sources": [
     {
@@ -6844,6 +6944,497 @@
           ]
         }
       ]
+    },
+    {
+      "id": "P083",
+      "canonical_id": "P083",
+      "source_path": "other/1-s2.0-S0141118725000045-main.pdf",
+      "source_sha256": "ddb437bf1ea42f9e2e3627b331d7a766af1231b115a0fa739b4f77028fc415df",
+      "pages": 14,
+      "composite_source": false,
+      "title": "Failure modes and inclined bearing capacity of a modified suction caisson in sand",
+      "year": "2025",
+      "kind": "英文期刊；改型吸力筒模型试验与数值模拟；模式分类、响应分项与加载速率效应",
+      "authors": [
+        "Yun Bai",
+        "Dayong Li"
+      ],
+      "doi": "10.1016/j.apor.2025.104416",
+      "read_text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "visual_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "read_visual_text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "blank_or_separator_pages": [],
+      "key_figures": [
+        {
+          "label": "Fig.2–3",
+          "page": 2,
+          "purpose": "实物/参数化剖面与加载测量装置建立统一点号和符号。"
+        },
+        {
+          "label": "Fig.4–5",
+          "page": 3,
+          "purpose": "虚实线区分初始/运动后位置；模式分区用区域填充、边界线、点标记与直接文字。"
+        },
+        {
+          "label": "Fig.6–8",
+          "page": 4,
+          "purpose": "前后侧压力并排，深度向下，固定颜色点型编码，结构边界与加载方向直接标注。"
+        },
+        {
+          "label": "Fig.9–10",
+          "page": 5,
+          "purpose": "延续前后侧对照语法；两侧坐标方向和范围不同，读图时须核查。"
+        },
+        {
+          "label": "Fig.11",
+          "page": 6,
+          "purpose": "吸力曲线按位置分面，归一化标签需核查定义；正文p7说明引用Li et al. (2023)。"
+        },
+        {
+          "label": "Fig.12",
+          "page": 6,
+          "purpose": "整体荷载–位移与局部净压力双指标验证；峰后曲线差异限制全程一致的表述。"
+        },
+        {
+          "label": "Fig.13",
+          "page": 7,
+          "purpose": "2+2+1压力剖面，零线和结构界线提供物理定位。"
+        },
+        {
+          "label": "Fig.14–15",
+          "page": 8,
+          "purpose": "四模式固定2×2次序，变形视图与位移场交叉解释；当前页面未见Fig.15数值色条。"
+        },
+        {
+          "label": "Fig.16",
+          "page": 9,
+          "purpose": "地表竖向位移剖面补充云图定量信息，带零线、加载方向和归一化距离。"
+        },
+        {
+          "label": "Fig.17",
+          "page": 10,
+          "purpose": "四模式荷载–位移矩阵，速率颜色点型跨图一致，展示峰值与峰后全过程。"
+        },
+        {
+          "label": "Fig.18",
+          "page": 11,
+          "purpose": "同序四模式的净压力深度剖面，将速率效应定位到空间位置。"
+        },
+        {
+          "label": "Fig.19",
+          "page": 12,
+          "purpose": "内舱吸力与归一化位移曲线，按模式与速率对照。"
+        },
+        {
+          "label": "Fig.20",
+          "page": 13,
+          "purpose": "外结构吸力图与Fig.19的模式/速率编码一致，纵轴范围须独立阅读。"
+        }
+      ],
+      "key_tables": [
+        {
+          "label": "Table 1",
+          "page": 2,
+          "purpose": "单栏三线位置查阅表：点号、结构位置、埋深；分组减少重复。"
+        },
+        {
+          "label": "Table 2",
+          "page": 2,
+          "purpose": "单栏三线稀疏工况表：同点号按角度/速率集合分行，单位在表头。"
+        },
+        {
+          "label": "Table 3",
+          "page": 9,
+          "purpose": "跨栏三线响应汇总：工况和模式分组，极限指标、对应位移及相对基准增量并列。"
+        }
+      ],
+      "limitations": [
+        "N02为同文版本，不增加独立来源计数。仅迁移组织与图表表达，不迁移土性、界面参数、经验式或物理结论。",
+        "p6 Fig.11的Normalized passive suction p/D1标签需要回查定义和二级来源；本笔记未将其判错，也未据其建立默认归一化公式。",
+        "p6 Fig.12a峰后曲线分离是视觉观察，不能笼统称全程一致；不据此否定其他量/阶段的适用性。",
+        "p8 Fig.15当前完整页面未见数值色条；未声称作者一定未在其他材料定义尺度。模板应提供变量、单位、阶段与色标。",
+        "p9 Fig.16及p10–13 Fig.17–20的部分坐标范围不同，不能按相同像素高度直接比较；图例须依原数据保留，不补造等间隔工况。",
+        "正文与笔记中的相对增量需要明确基准；图形风格不能替代极限判据、模型验证或工程适用范围。"
+      ],
+      "reading_status": "read_complete",
+      "unaccounted_pages": [],
+      "note_sha256": "b3a3a1340770d6a9df3571299571bdf6b94ac7107308ffd94e84150020504d2e",
+      "coverage_record_sha256": "1ffa518bb933df190767d22d92065dc33eb628e26dbff1fb7b6e28781a006925",
+      "complete_note": "papers/P083.md",
+      "section_routes": [
+        {
+          "heading": "阅读范围与书目",
+          "destinations": [
+            "figures",
+            "writing"
+          ]
+        },
+        {
+          "heading": "全文结构与论证链",
+          "destinations": [
+            "writing"
+          ]
+        },
+        {
+          "heading": "可迁移写作技法",
+          "destinations": [
+            "writing"
+          ]
+        },
+        {
+          "heading": "函数曲线和配图风格",
+          "destinations": [
+            "figures"
+          ]
+        },
+        {
+          "heading": "表格风格",
+          "destinations": [
+            "figures"
+          ]
+        },
+        {
+          "heading": "迁移建议",
+          "destinations": [
+            "figures",
+            "writing"
+          ]
+        },
+        {
+          "heading": "不可迁移与证据限制",
+          "destinations": [
+            "figures",
+            "writing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P085",
+      "canonical_id": "P085",
+      "source_path": "other/一种加装稳定翼的海上风电负压桶型基础研究_李炜.pdf",
+      "source_sha256": "669f30a515135c50e966f149b93dec0bbfef7fe8fca82262b6f51e74bde0ceee",
+      "pages": 6,
+      "composite_source": false,
+      "review_date": "2026-11-04",
+      "page_numbering": "PDF pages (1-based)",
+      "evidence_type": "Local full-text reading and rendered-page visual inspection; recommendations separated from observations",
+      "title": "一种加装稳定翼的海上风电负压桶型基础研究",
+      "authors": [
+        "李炜"
+      ],
+      "year": "2012",
+      "journal": "海洋工程",
+      "volume": "30",
+      "issue": "1",
+      "doi": "10.16483/j.issn.1005-9865.2012.01.022",
+      "kind": "中文期刊；改型基础构造说明与静动力响应比较",
+      "read_text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "visual_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "key_figures": [
+        {
+          "label": "图1–2",
+          "page": 2,
+          "purpose": "整体、截面、局部细节及编号符号先于性能论证。"
+        },
+        {
+          "label": "图3",
+          "page": 3,
+          "purpose": "局部静力模型与整体动力模型分开展示。"
+        },
+        {
+          "label": "图4–6",
+          "page": 4,
+          "purpose": "两构型绝对响应与降低幅度分开；黑线、异形标记、单位坐标。"
+        },
+        {
+          "label": "图7–8",
+          "page": 4,
+          "purpose": "成对位移和应力场解释曲线差异；截图外观与细小标尺不作为推荐样式。"
+        },
+        {
+          "label": "图9–12",
+          "page": 5,
+          "purpose": "输入时程先于双测点响应；时域/频域分图；谱图有对数坐标。"
+        },
+        {
+          "label": "图13",
+          "page": 6,
+          "purpose": "左右测点分面，横轴一致，纵轴范围不同并明确标出。"
+        }
+      ],
+      "key_tables": [
+        {
+          "label": "表1–2",
+          "page": 5,
+          "purpose": "无竖线、分层表头、单位置于组头；基准/改型/相对变化依次成行。"
+        }
+      ],
+      "limitations": [
+        "第4页图4题为X0而纵轴视觉读作Y/mm，疑似量名不一致，不得照搬。",
+        "第4页图8两面板同标(a)，需核对分图序号。",
+        "2012年的规范及成熟度判断未核验当前状态。",
+        "参数、荷载、频率、改进幅度均不得当作模型默认值。",
+        "未测量字体线宽等精确样式数值；建议值需另行标记。"
+      ],
+      "published_pages": "145–150",
+      "read_visual_text_pages": [],
+      "blank_or_separator_pages": [],
+      "reading_status": "read_complete",
+      "unaccounted_pages": [],
+      "note_sha256": "de05a8680ba711379ee00684813d46e540aded1c2dbe2e3ef5424ffda511d49f",
+      "coverage_record_sha256": "bf2a5b8260e730e137efaddc888f5f57333605c17a9f6bb9bb1be577bfe9adb9",
+      "complete_note": "papers/P085.md",
+      "section_routes": [
+        {
+          "heading": "全文结构与论证链",
+          "destinations": [
+            "writing"
+          ]
+        },
+        {
+          "heading": "可迁移写作技法",
+          "destinations": [
+            "writing"
+          ]
+        },
+        {
+          "heading": "函数曲线和配图风格",
+          "destinations": [
+            "figures"
+          ]
+        },
+        {
+          "heading": "表格风格",
+          "destinations": [
+            "figures"
+          ]
+        },
+        {
+          "heading": "迁移建议",
+          "destinations": [
+            "figures",
+            "writing"
+          ]
+        },
+        {
+          "heading": "不可迁移与证据限制",
+          "destinations": [
+            "figures",
+            "writing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P086",
+      "canonical_id": "P086",
+      "source_path": "other/单筒吸力桩基础H-M不排水承载力包络线研究_董小钰.pdf",
+      "source_sha256": "df8db2f86920ebd62e1ae1ea18aa2555ab28fb4652f1c49239c8dd2581facaee",
+      "pages": 11,
+      "composite_source": false,
+      "review_date": "2026-11-04",
+      "page_numbering": "PDF pages (1-based)",
+      "evidence_type": "Local full-text reading and rendered-page visual inspection; recommendations separated from observations",
+      "title": "单筒吸力桩基础H-M不排水承载力包络线研究",
+      "authors": [
+        "董小钰",
+        "张念涛",
+        "封晓伟",
+        "赵乾"
+      ],
+      "year": "2026",
+      "journal": "海洋工程",
+      "volume": "44",
+      "issue": "4",
+      "doi": "10.16483/j.issn.1005-9865.2026.04.017",
+      "kind": "中文期刊；不排水H-M包络线机制解释与理论-数值比较",
+      "read_text_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "visual_pages": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "key_figures": [
+        {
+          "label": "图1",
+          "page": 3,
+          "purpose": "归一化轴、几何投影、长短轴及角度说明公式参数意义。"
+        },
+        {
+          "label": "图2–3",
+          "page": 4,
+          "purpose": "符号正方向、强度剖面与模型范围先定义。"
+        },
+        {
+          "label": "图4",
+          "page": 5,
+          "purpose": "三个验证面板，曲线/空心点、来源与可比条件分别识别。"
+        },
+        {
+          "label": "图5",
+          "page": 5,
+          "purpose": "包络代表点经引线关联位移场；未见共享定量色标。"
+        },
+        {
+          "label": "图6",
+          "page": 6,
+          "purpose": "转动/平移机制分面，阻力分布及局部几何明示。"
+        },
+        {
+          "label": "图7–8",
+          "page": 7,
+          "purpose": "指标提取示意；深度向下、顶部响应轴、四联同尺度剖面。"
+        },
+        {
+          "label": "图9",
+          "page": 8,
+          "purpose": "理论线型与FEA空心符号对应参数组，归一化横纵坐标。"
+        },
+        {
+          "label": "图10",
+          "page": 9,
+          "purpose": "2×2同坐标包络线，每面板固定几何比值，图例对应理论线与FEA点。"
+        }
+      ],
+      "key_tables": [
+        {
+          "label": "表1",
+          "page": 8,
+          "purpose": "行几何条件、列土参数分组、FEA/公式成对列，顶部归一化响应标题；无竖线或底色。"
+        }
+      ],
+      "limitations": [
+        "第9页§3.3.2转动模式引用图6(b)，第6页实际(a)转动、(b)平移，疑似分图引用错误。",
+        "第9页§3.3.3代入式(1)的表述与第3页显式椭圆式(2)和图10图例不一致，需检查。",
+        "图5无可据以定量对比的共享色标，不可仅凭颜色比较场量大小。",
+        "不排水、无裂隙、界面和土参数及归一化分母不作为其他模型默认值。",
+        "源文误差界限不用于认证其他项目；字体线宽等未测量。"
+      ],
+      "published_pages": "203–213",
+      "read_visual_text_pages": [],
+      "blank_or_separator_pages": [],
+      "reading_status": "read_complete",
+      "unaccounted_pages": [],
+      "note_sha256": "85d53d61fb9c6fd8bdc6adc13f06c7458aa09cf788a399897d76d1b637fc1ca9",
+      "coverage_record_sha256": "73d5abe06ec79c55ea96a62ee85a1d69b61fbad88f24fb09ef5d8d0606aaae25",
+      "complete_note": "papers/P086.md",
+      "section_routes": [
+        {
+          "heading": "全文结构与论证链",
+          "destinations": [
+            "writing"
+          ]
+        },
+        {
+          "heading": "可迁移写作技法",
+          "destinations": [
+            "writing"
+          ]
+        },
+        {
+          "heading": "函数曲线和配图风格",
+          "destinations": [
+            "figures"
+          ]
+        },
+        {
+          "heading": "表格风格",
+          "destinations": [
+            "figures"
+          ]
+        },
+        {
+          "heading": "迁移建议",
+          "destinations": [
+            "figures",
+            "writing"
+          ]
+        },
+        {
+          "heading": "不可迁移与证据限制",
+          "destinations": [
+            "figures",
+            "writing"
+          ]
+        }
+      ]
     }
   ],
   "files": [
@@ -6860,6 +7451,7 @@
         "P001"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 9,
       "file_key": "F001"
@@ -6877,6 +7469,7 @@
         "P002"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 37,
       "file_key": "F002"
@@ -6894,6 +7487,7 @@
         "P003"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 21,
       "file_key": "F003"
@@ -6911,6 +7505,7 @@
         "P004"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 7,
       "file_key": "F004"
@@ -6928,6 +7523,7 @@
         "P005"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 14,
       "file_key": "F005"
@@ -6945,6 +7541,7 @@
         "P006"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 13,
       "file_key": "F006"
@@ -6962,6 +7559,7 @@
         "P007"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 9,
       "file_key": "F007"
@@ -6979,6 +7577,7 @@
         "P008"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 8,
       "file_key": "F008"
@@ -6996,6 +7595,7 @@
         "P009"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 18,
       "file_key": "F009"
@@ -7013,6 +7613,7 @@
         "P010"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 12,
       "file_key": "F010"
@@ -7030,6 +7631,7 @@
         "P011"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 39,
       "file_key": "F011"
@@ -7047,6 +7649,7 @@
         "P012"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 22,
       "file_key": "F012"
@@ -7064,6 +7667,7 @@
         "P013"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 27,
       "file_key": "F013"
@@ -7081,6 +7685,7 @@
         "P014"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 21,
       "file_key": "F014"
@@ -7098,6 +7703,7 @@
         "P015"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 19,
       "file_key": "F015"
@@ -7115,6 +7721,7 @@
         "P015"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 19,
       "file_key": "F016"
@@ -7133,6 +7740,7 @@
         "P015"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 19,
       "file_key": "F017"
@@ -7151,6 +7759,7 @@
         "P009"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 36,
       "file_key": "F018"
@@ -7169,6 +7778,7 @@
         "P009"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 18,
       "file_key": "F019"
@@ -7187,6 +7797,7 @@
         "P009"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 36,
       "file_key": "F020"
@@ -7205,6 +7816,7 @@
         "P009"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 18,
       "file_key": "F021"
@@ -7223,6 +7835,7 @@
         "P010"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 24,
       "file_key": "F022"
@@ -7241,6 +7854,7 @@
         "P010"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 12,
       "file_key": "F023"
@@ -7259,6 +7873,7 @@
         "P010"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 24,
       "file_key": "F024"
@@ -7277,6 +7892,7 @@
         "P010"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 12,
       "file_key": "F025"
@@ -7295,6 +7911,7 @@
         "P011"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 78,
       "file_key": "F026"
@@ -7313,6 +7930,7 @@
         "P011"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 39,
       "file_key": "F027"
@@ -7331,6 +7949,7 @@
         "P011"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 78,
       "file_key": "F028"
@@ -7349,6 +7968,7 @@
         "P011"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 39,
       "file_key": "F029"
@@ -7367,6 +7987,7 @@
         "P012"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 44,
       "file_key": "F030"
@@ -7385,6 +8006,7 @@
         "P012"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 22,
       "file_key": "F031"
@@ -7403,6 +8025,7 @@
         "P012"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 44,
       "file_key": "F032"
@@ -7421,6 +8044,7 @@
         "P012"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 22,
       "file_key": "F033"
@@ -7439,6 +8063,7 @@
         "P013"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 54,
       "file_key": "F034"
@@ -7457,6 +8082,7 @@
         "P013"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 27,
       "file_key": "F035"
@@ -7475,6 +8101,7 @@
         "P013"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 54,
       "file_key": "F036"
@@ -7493,6 +8120,7 @@
         "P013"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 27,
       "file_key": "F037"
@@ -7511,6 +8139,7 @@
         "P014"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 42,
       "file_key": "F038"
@@ -7529,6 +8158,7 @@
         "P014"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 21,
       "file_key": "F039"
@@ -7547,6 +8177,7 @@
         "P014"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 42,
       "file_key": "F040"
@@ -7565,6 +8196,7 @@
         "P014"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 21,
       "file_key": "F041"
@@ -7583,6 +8215,7 @@
         "P009"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 18,
       "file_key": "F042"
@@ -7601,6 +8234,7 @@
         "P010"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 12,
       "file_key": "F043"
@@ -7619,6 +8253,7 @@
         "P011"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 39,
       "file_key": "F044"
@@ -7637,6 +8272,7 @@
         "P012"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 22,
       "file_key": "F045"
@@ -7655,6 +8291,7 @@
         "P013"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 27,
       "file_key": "F046"
@@ -7673,6 +8310,7 @@
         "P014"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 21,
       "file_key": "F047"
@@ -7690,6 +8328,7 @@
         "P041"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 36,
       "file_key": "F048"
@@ -7707,6 +8346,7 @@
         "P042"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 29,
       "file_key": "F049"
@@ -7724,6 +8364,7 @@
         "P008"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 8,
       "file_key": "F050"
@@ -7741,6 +8382,7 @@
         "P043"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 40,
       "file_key": "F051"
@@ -7758,6 +8400,7 @@
         "P002"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 37,
       "file_key": "F052"
@@ -7775,6 +8418,7 @@
         "P003"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 21,
       "file_key": "F053"
@@ -7792,6 +8436,7 @@
         "P044"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 1,
       "file_key": "F054"
@@ -7809,6 +8454,7 @@
         "P001"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 9,
       "file_key": "F055"
@@ -7826,6 +8472,7 @@
         "P045"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 12,
       "file_key": "F056"
@@ -7843,6 +8490,7 @@
         "P046"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 12,
       "file_key": "F057"
@@ -7860,6 +8508,7 @@
         "P047"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 6,
       "file_key": "F058"
@@ -7877,6 +8526,7 @@
         "P004"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 7,
       "file_key": "F059"
@@ -7894,6 +8544,7 @@
         "P006"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 13,
       "file_key": "F060"
@@ -7911,6 +8562,7 @@
         "P007"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 9,
       "file_key": "F061"
@@ -7928,6 +8580,7 @@
         "P048"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 22,
       "file_key": "F062"
@@ -7945,6 +8598,7 @@
         "P005"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 14,
       "file_key": "F063"
@@ -7962,6 +8616,7 @@
         "P049"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 19,
       "file_key": "F064"
@@ -7979,6 +8634,7 @@
         "P050"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 12,
       "file_key": "F065"
@@ -7996,6 +8652,7 @@
         "P051"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 18,
       "file_key": "F066"
@@ -8013,6 +8670,7 @@
         "P052"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 10,
       "file_key": "F067"
@@ -8030,6 +8688,7 @@
         "P053"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 17,
       "file_key": "F068"
@@ -8047,6 +8706,7 @@
         "P054"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 31,
       "file_key": "F069"
@@ -8064,6 +8724,7 @@
         "P055"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 12,
       "file_key": "F070"
@@ -8081,6 +8742,7 @@
         "P056"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 14,
       "file_key": "F071"
@@ -8098,6 +8760,7 @@
         "P057"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 23,
       "file_key": "F072"
@@ -8115,6 +8778,7 @@
         "P058"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 9,
       "file_key": "F073"
@@ -8132,6 +8796,7 @@
         "P059"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 12,
       "file_key": "F074"
@@ -8149,6 +8814,7 @@
         "P060"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 18,
       "file_key": "F075"
@@ -8166,6 +8832,7 @@
         "P061"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 16,
       "file_key": "F076"
@@ -8183,6 +8850,7 @@
         "P062"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 9,
       "file_key": "F077"
@@ -8200,6 +8868,7 @@
         "P008"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 8,
       "file_key": "F078"
@@ -8217,6 +8886,7 @@
         "P063"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 22,
       "file_key": "F079"
@@ -8234,6 +8904,7 @@
         "P064"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 9,
       "file_key": "F080"
@@ -8251,6 +8922,7 @@
         "P065"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 16,
       "file_key": "F081"
@@ -8268,6 +8940,7 @@
         "P066"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 23,
       "file_key": "F082"
@@ -8285,6 +8958,7 @@
         "P067"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 3,
       "file_key": "F083"
@@ -8302,6 +8976,7 @@
         "P068"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 7,
       "file_key": "F084"
@@ -8319,6 +8994,7 @@
         "P069"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 166,
       "file_key": "F085"
@@ -8336,6 +9012,7 @@
         "P070"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 4,
       "file_key": "F086"
@@ -8353,6 +9030,7 @@
         "P071"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 3,
       "file_key": "F087"
@@ -8370,6 +9048,7 @@
         "P072"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 9,
       "file_key": "F088"
@@ -8387,6 +9066,7 @@
         "P073"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 6,
       "file_key": "F089"
@@ -8405,6 +9085,7 @@
         "P046"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": true,
       "pages": 12,
       "file_key": "F090"
@@ -8422,6 +9103,7 @@
         "P046"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 12,
       "file_key": "F091"
@@ -8439,6 +9121,7 @@
         "P075"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 138,
       "file_key": "F092"
@@ -8456,6 +9139,7 @@
         "P063"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 22,
       "file_key": "F093"
@@ -8473,6 +9157,7 @@
         "P047"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 6,
       "file_key": "F094"
@@ -8490,6 +9175,7 @@
         "P076"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 6,
       "file_key": "F095"
@@ -8507,6 +9193,7 @@
         "P061"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 16,
       "file_key": "F096"
@@ -8524,6 +9211,7 @@
         "P051"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 18,
       "file_key": "F097"
@@ -8541,6 +9229,7 @@
         "P075"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 138,
       "file_key": "F098"
@@ -8558,6 +9247,7 @@
         "P077"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 16,
       "file_key": "F099"
@@ -8575,6 +9265,7 @@
         "P078"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 9,
       "file_key": "F100"
@@ -8592,6 +9283,7 @@
         "P079"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 108,
       "file_key": "F101"
@@ -8609,6 +9301,7 @@
         "P080"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 93,
       "file_key": "F102"
@@ -8626,6 +9319,7 @@
         "P055"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 12,
       "file_key": "F103"
@@ -8643,6 +9337,7 @@
         "P081"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 22,
       "file_key": "F104"
@@ -8660,6 +9355,7 @@
         "P076"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 6,
       "file_key": "F105"
@@ -8677,6 +9373,7 @@
         "P043"
       ],
       "byte_duplicate": true,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 40,
       "file_key": "F106"
@@ -8694,9 +9391,102 @@
         "P082"
       ],
       "byte_duplicate": false,
+      "content_duplicate": false,
       "translation_derivative": false,
       "pages": 16,
       "file_key": "F107"
+    },
+    {
+      "path": "other/1-s2.0-S0141118725000045-main.pdf",
+      "format": "pdf",
+      "bytes": 8196777,
+      "sha256": "ddb437bf1ea42f9e2e3627b331d7a766af1231b115a0fa739b4f77028fc415df",
+      "byte_source_id": "P083",
+      "canonical_id": "P083",
+      "processing_status": "original_read_complete",
+      "canonical_reading_status": "read_complete",
+      "relation_chain": [
+        "P083"
+      ],
+      "byte_duplicate": false,
+      "content_duplicate": false,
+      "translation_derivative": false,
+      "pages": 14,
+      "file_key": "F108"
+    },
+    {
+      "path": "other/1-s2.0-S0141118725000045-main_2.pdf",
+      "format": "pdf",
+      "bytes": 8196711,
+      "sha256": "4ffb8eac6286adc2636daae25c75d326fdcd8ac1ffd07b8b6e2cac1f544dfa6a",
+      "byte_source_id": "P084",
+      "canonical_id": "P083",
+      "processing_status": "content_duplicate_mapped",
+      "canonical_reading_status": "read_complete",
+      "relation_chain": [
+        "P084",
+        "P083"
+      ],
+      "byte_duplicate": false,
+      "content_duplicate": true,
+      "translation_derivative": false,
+      "pages": 14,
+      "file_key": "F109"
+    },
+    {
+      "path": "other/一种加装稳定翼的海上风电负压桶型基础研究_李炜.pdf",
+      "format": "pdf",
+      "bytes": 518777,
+      "sha256": "669f30a515135c50e966f149b93dec0bbfef7fe8fca82262b6f51e74bde0ceee",
+      "byte_source_id": "P085",
+      "canonical_id": "P085",
+      "processing_status": "original_read_complete",
+      "canonical_reading_status": "read_complete",
+      "relation_chain": [
+        "P085"
+      ],
+      "byte_duplicate": false,
+      "content_duplicate": false,
+      "translation_derivative": false,
+      "pages": 6,
+      "file_key": "F110"
+    },
+    {
+      "path": "other/单筒吸力桩基础H-M不排水承载力包络线研究_董小钰.pdf",
+      "format": "pdf",
+      "bytes": 1652404,
+      "sha256": "df8db2f86920ebd62e1ae1ea18aa2555ab28fb4652f1c49239c8dd2581facaee",
+      "byte_source_id": "P086",
+      "canonical_id": "P086",
+      "processing_status": "original_read_complete",
+      "canonical_reading_status": "read_complete",
+      "relation_chain": [
+        "P086"
+      ],
+      "byte_duplicate": false,
+      "content_duplicate": false,
+      "translation_derivative": false,
+      "pages": 11,
+      "file_key": "F111"
+    },
+    {
+      "path": "other/单筒吸力桩基础H-M不排水承载力包络线研究_董小钰_2.pdf",
+      "format": "pdf",
+      "bytes": 1640271,
+      "sha256": "0e5f0d424b8a13aa7a2250d0a6da731781c7fd21dd3d159e427774fe30e2c6f8",
+      "byte_source_id": "P087",
+      "canonical_id": "P086",
+      "processing_status": "content_duplicate_mapped",
+      "canonical_reading_status": "read_complete",
+      "relation_chain": [
+        "P087",
+        "P086"
+      ],
+      "byte_duplicate": false,
+      "content_duplicate": true,
+      "translation_derivative": false,
+      "pages": 11,
+      "file_key": "F112"
     },
     {
       "path": "gge/annotated/Babu2025_validation_p4.png",
@@ -8707,7 +9497,7 @@
       "category": "figure_or_page_image",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F108"
+      "file_key": "F113"
     },
     {
       "path": "gge/annotated/Babu2025_validation_p5.png",
@@ -8718,7 +9508,7 @@
       "category": "figure_or_page_image",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F109"
+      "file_key": "F114"
     },
     {
       "path": "gge/annotated/Babu2025_validation_p6.png",
@@ -8729,7 +9519,7 @@
       "category": "figure_or_page_image",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F110"
+      "file_key": "F115"
     },
     {
       "path": "gge/translation/chunks/020-01254-0_part0.jsonl",
@@ -8740,7 +9530,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F111"
+      "file_key": "F116"
     },
     {
       "path": "gge/translation/chunks/020-01254-0_part0.out.jsonl",
@@ -8751,7 +9541,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F112"
+      "file_key": "F117"
     },
     {
       "path": "gge/translation/chunks/020-01534-9_part0.jsonl",
@@ -8762,7 +9552,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F113"
+      "file_key": "F118"
     },
     {
       "path": "gge/translation/chunks/020-01534-9_part0.out.jsonl",
@@ -8773,7 +9563,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F114"
+      "file_key": "F119"
     },
     {
       "path": "gge/translation/chunks/022-02075-z_part0.jsonl",
@@ -8784,7 +9574,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F115"
+      "file_key": "F120"
     },
     {
       "path": "gge/translation/chunks/022-02075-z_part0.out.jsonl",
@@ -8795,7 +9585,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F116"
+      "file_key": "F121"
     },
     {
       "path": "gge/translation/chunks/022-02075-z_part1.jsonl",
@@ -8806,7 +9596,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F117"
+      "file_key": "F122"
     },
     {
       "path": "gge/translation/chunks/022-02075-z_part1.out.jsonl",
@@ -8817,7 +9607,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F118"
+      "file_key": "F123"
     },
     {
       "path": "gge/translation/chunks/022-02075-z_part2.jsonl",
@@ -8828,7 +9618,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F119"
+      "file_key": "F124"
     },
     {
       "path": "gge/translation/chunks/022-02075-z_part2.out.jsonl",
@@ -8839,7 +9629,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F120"
+      "file_key": "F125"
     },
     {
       "path": "gge/translation/chunks/023-02421-9_part0.jsonl",
@@ -8850,7 +9640,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F121"
+      "file_key": "F126"
     },
     {
       "path": "gge/translation/chunks/023-02421-9_part0.out.jsonl",
@@ -8861,7 +9651,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F122"
+      "file_key": "F127"
     },
     {
       "path": "gge/translation/chunks/023-02421-9_part1.jsonl",
@@ -8872,7 +9662,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F123"
+      "file_key": "F128"
     },
     {
       "path": "gge/translation/chunks/023-02421-9_part1.out.jsonl",
@@ -8883,7 +9673,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F124"
+      "file_key": "F129"
     },
     {
       "path": "gge/translation/chunks/024-02757-w_part0.jsonl",
@@ -8894,7 +9684,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F125"
+      "file_key": "F130"
     },
     {
       "path": "gge/translation/chunks/024-02757-w_part0.out.jsonl",
@@ -8905,7 +9695,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F126"
+      "file_key": "F131"
     },
     {
       "path": "gge/translation/chunks/024-02757-w_part1.jsonl",
@@ -8916,7 +9706,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F127"
+      "file_key": "F132"
     },
     {
       "path": "gge/translation/chunks/024-02757-w_part1.out.jsonl",
@@ -8927,7 +9717,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F128"
+      "file_key": "F133"
     },
     {
       "path": "gge/translation/chunks/024-02822-4_part0.jsonl",
@@ -8938,7 +9728,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F129"
+      "file_key": "F134"
     },
     {
       "path": "gge/translation/chunks/024-02822-4_part0.out.jsonl",
@@ -8949,7 +9739,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F130"
+      "file_key": "F135"
     },
     {
       "path": "gge/translation/chunks/024-02822-4_part1.jsonl",
@@ -8960,7 +9750,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F131"
+      "file_key": "F136"
     },
     {
       "path": "gge/translation/chunks/024-02822-4_part1.out.jsonl",
@@ -8971,7 +9761,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F132"
+      "file_key": "F137"
     },
     {
       "path": "gge/translation/chunks/GLOSSARY.md",
@@ -8982,7 +9772,7 @@
       "category": "supporting_note",
       "mapping_basis": "not_applicable",
       "reason": "辅助文件，不作为新增论文；仅登记文件身份，未声称重新核对其中全部内容。",
-      "file_key": "F133"
+      "file_key": "F138"
     },
     {
       "path": "gge/translation/GGE_s10706-020-01254-0/capture.log",
@@ -8993,7 +9783,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F134"
+      "file_key": "F139"
     },
     {
       "path": "gge/translation/GGE_s10706-020-01254-0/render.log",
@@ -9004,7 +9794,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F135"
+      "file_key": "F140"
     },
     {
       "path": "gge/translation/GGE_s10706-020-01254-0/translations.jsonl",
@@ -9015,7 +9805,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F136"
+      "file_key": "F141"
     },
     {
       "path": "gge/translation/GGE_s10706-020-01254-0/units.jsonl",
@@ -9026,7 +9816,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F137"
+      "file_key": "F142"
     },
     {
       "path": "gge/translation/GGE_s10706-020-01534-9/capture.log",
@@ -9037,7 +9827,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F138"
+      "file_key": "F143"
     },
     {
       "path": "gge/translation/GGE_s10706-020-01534-9/render.log",
@@ -9048,7 +9838,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F139"
+      "file_key": "F144"
     },
     {
       "path": "gge/translation/GGE_s10706-020-01534-9/translations.jsonl",
@@ -9059,7 +9849,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F140"
+      "file_key": "F145"
     },
     {
       "path": "gge/translation/GGE_s10706-020-01534-9/units.jsonl",
@@ -9070,7 +9860,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F141"
+      "file_key": "F146"
     },
     {
       "path": "gge/translation/GGE_s10706-022-02075-z/capture.log",
@@ -9081,7 +9871,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F142"
+      "file_key": "F147"
     },
     {
       "path": "gge/translation/GGE_s10706-022-02075-z/render.log",
@@ -9092,7 +9882,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F143"
+      "file_key": "F148"
     },
     {
       "path": "gge/translation/GGE_s10706-022-02075-z/translations.jsonl",
@@ -9103,7 +9893,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F144"
+      "file_key": "F149"
     },
     {
       "path": "gge/translation/GGE_s10706-022-02075-z/units.jsonl",
@@ -9114,7 +9904,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F145"
+      "file_key": "F150"
     },
     {
       "path": "gge/translation/GGE_s10706-023-02421-9/capture.log",
@@ -9125,7 +9915,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F146"
+      "file_key": "F151"
     },
     {
       "path": "gge/translation/GGE_s10706-023-02421-9/render.log",
@@ -9136,7 +9926,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F147"
+      "file_key": "F152"
     },
     {
       "path": "gge/translation/GGE_s10706-023-02421-9/translations.jsonl",
@@ -9147,7 +9937,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F148"
+      "file_key": "F153"
     },
     {
       "path": "gge/translation/GGE_s10706-023-02421-9/units.jsonl",
@@ -9158,7 +9948,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F149"
+      "file_key": "F154"
     },
     {
       "path": "gge/translation/GGE_s10706-024-02757-w/capture.log",
@@ -9169,7 +9959,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F150"
+      "file_key": "F155"
     },
     {
       "path": "gge/translation/GGE_s10706-024-02757-w/render.log",
@@ -9180,7 +9970,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F151"
+      "file_key": "F156"
     },
     {
       "path": "gge/translation/GGE_s10706-024-02757-w/translations.jsonl",
@@ -9191,7 +9981,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F152"
+      "file_key": "F157"
     },
     {
       "path": "gge/translation/GGE_s10706-024-02757-w/units.jsonl",
@@ -9202,7 +9992,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F153"
+      "file_key": "F158"
     },
     {
       "path": "gge/translation/GGE_s10706-024-02822-4/capture.log",
@@ -9213,7 +10003,7 @@
       "category": "process_log",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F154"
+      "file_key": "F159"
     },
     {
       "path": "gge/translation/GGE_s10706-024-02822-4/translations.jsonl",
@@ -9224,7 +10014,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F155"
+      "file_key": "F160"
     },
     {
       "path": "gge/translation/GGE_s10706-024-02822-4/units.jsonl",
@@ -9235,7 +10025,7 @@
       "category": "translation_intermediate",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F156"
+      "file_key": "F161"
     },
     {
       "path": "gge/txt/GGE_s10706-020-01254-0.txt",
@@ -9246,7 +10036,7 @@
       "category": "extracted_text",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F157"
+      "file_key": "F162"
     },
     {
       "path": "gge/txt/GGE_s10706-020-01534-9.txt",
@@ -9257,7 +10047,7 @@
       "category": "extracted_text",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F158"
+      "file_key": "F163"
     },
     {
       "path": "gge/txt/GGE_s10706-022-02075-z.txt",
@@ -9268,7 +10058,7 @@
       "category": "extracted_text",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F159"
+      "file_key": "F164"
     },
     {
       "path": "gge/txt/GGE_s10706-023-02421-9.txt",
@@ -9279,7 +10069,7 @@
       "category": "extracted_text",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F160"
+      "file_key": "F165"
     },
     {
       "path": "gge/txt/GGE_s10706-024-02757-w.txt",
@@ -9290,7 +10080,7 @@
       "category": "extracted_text",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F161"
+      "file_key": "F166"
     },
     {
       "path": "gge/txt/GGE_s10706-024-02822-4.txt",
@@ -9301,7 +10091,7 @@
       "category": "extracted_text",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F162"
+      "file_key": "F167"
     },
     {
       "path": "gge/txt/GGE_s10706-024-03048-0_Babu2025_sample.txt",
@@ -9312,7 +10102,7 @@
       "category": "extracted_text",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F163"
+      "file_key": "F168"
     },
     {
       "path": "other/perimeter pile groups/idea.docx",
@@ -9323,7 +10113,7 @@
       "category": "research_proposal",
       "mapping_basis": "not_applicable",
       "reason": "主代理已使用 OfficeCLI 确认为研究设想；不是新增论文，不计入论文精读数量。",
-      "file_key": "F164"
+      "file_key": "F169"
     },
     {
       "path": "other/perimeter pile groups/Untitled project.g3x",
@@ -9334,7 +10124,7 @@
       "category": "external_project",
       "mapping_basis": "not_applicable",
       "reason": "外部项目文件，不是论文；未运行或验证项目内容。",
-      "file_key": "F165"
+      "file_key": "F170"
     },
     {
       "path": "validation/Bienen2012_JGGE_piles_with_wings.txt",
@@ -9345,7 +10135,7 @@
       "category": "extracted_text",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F166"
+      "file_key": "F171"
     },
     {
       "path": "validation/bienen2012_S1_1aM_fig6a.csv",
@@ -9356,7 +10146,7 @@
       "category": "derived_curve_data",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F167"
+      "file_key": "F172"
     },
     {
       "path": "validation/bienen2012_S1_1aW_fig6a.csv",
@@ -9367,7 +10157,7 @@
       "category": "derived_curve_data",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F168"
+      "file_key": "F173"
     },
     {
       "path": "validation/bienen2012_S2_1M_fig9.csv",
@@ -9378,7 +10168,7 @@
       "category": "derived_curve_data",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F169"
+      "file_key": "F174"
     },
     {
       "path": "validation/bienen2012_S2_1W_fig9.csv",
@@ -9389,7 +10179,7 @@
       "category": "derived_curve_data",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F170"
+      "file_key": "F175"
     },
     {
       "path": "validation/bienen_p7.png",
@@ -9400,7 +10190,7 @@
       "category": "figure_or_page_image",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F171"
+      "file_key": "F176"
     },
     {
       "path": "validation/Sakr2020_AJG_single_finned_piles_clay.txt",
@@ -9411,7 +10201,7 @@
       "category": "extracted_text",
       "mapping_basis": "filename_or_directory",
       "reason": "文件名/所在目录映射到 P061 的派生材料；不作为独立来源，未据此重复计数。",
-      "file_key": "F172"
+      "file_key": "F177"
     },
     {
       "path": "validation_candidates/candidates.md",
@@ -9422,7 +10212,7 @@
       "category": "supporting_note",
       "mapping_basis": "not_applicable",
       "reason": "辅助文件，不作为新增论文；仅登记文件身份，未声称重新核对其中全部内容。",
-      "file_key": "F173"
+      "file_key": "F178"
     }
   ]
 }

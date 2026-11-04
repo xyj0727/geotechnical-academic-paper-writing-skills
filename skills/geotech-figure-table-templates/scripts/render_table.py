@@ -11,11 +11,24 @@ def render(spec):
         if not cols or any(len(row)!=len(cols) for row in t['rows']):
             raise ValueError(f'Column count mismatch in {t["id"]}')
         esc=lambda v:html.escape(str(v))
-        head=''.join('<th>'+esc(c)+'</th>' for c in cols)
+        head='<tr>'+''.join('<th scope="col">'+esc(c)+'</th>' for c in cols)+'</tr>'
+        if 'column_groups' in t:
+            groups=t['column_groups']
+            if not isinstance(groups,list) or not groups:
+                raise ValueError(f'column_groups must be a nonempty list in {t["id"]}')
+            for group in groups:
+                if (not isinstance(group,dict) or 'label' not in group
+                    or not isinstance(group.get('span'),int)
+                    or isinstance(group['span'],bool) or group['span']<=0):
+                    raise ValueError(f'Each column group needs a label and positive integer span in {t["id"]}')
+            if sum(group['span'] for group in groups)!=len(cols):
+                raise ValueError(f'Column group spans must total {len(cols)} in {t["id"]}')
+            grouped=''.join(f'<th scope="colgroup" colspan="{group["span"]}"><span>{esc(group["label"])}</span></th>' for group in groups)
+            head='<tr class="column-groups">'+grouped+'</tr>'+head
         body=''.join('<tr>'+''.join('<td>'+esc(v)+'</td>' for v in row)+'</tr>' for row in t['rows'])
-        sections.append(f'<section id="{esc(t["id"])}"><h2>{esc(t["caption"])}</h2><div class="scroll"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div><p class="note">{esc(t.get("note",""))}</p></section>')
+        sections.append(f'<section id="{esc(t["id"])}"><h2>{esc(t["caption"])}</h2><div class="scroll"><table><thead>{head}</thead><tbody>{body}</tbody></table></div><p class="note">{esc(t.get("note",""))}</p></section>')
     return '''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Geotechnical table templates</title><style>
-body{max-width:1100px;margin:40px auto;padding:0 24px;background:#f4f3ef;color:#1f2933;font:16px/1.7 system-ui,sans-serif}h1{font-size:28px}h2{font:18px SimHei,serif;text-align:center;font-weight:normal}section{background:white;padding:24px;margin:26px 0;border:1px solid #e3e0d8}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;border-top:.75pt solid black;border-bottom:.75pt solid black;font:12px/1.55 "Times New Roman",SimSun,serif}th{border-bottom:.5pt solid black;font-weight:normal}td,th{padding:8px 10px;text-align:center;vertical-align:top}td:first-child{text-align:left}.note{font-size:13px;color:#555}@media print{body{background:white}section{border:0}thead{display:table-header-group}tr{break-inside:avoid}}</style><h1>岩土论文表格预览</h1><p>'''+intro+'</p>'+''.join(sections)+'</html>'
+body{max-width:1100px;margin:40px auto;padding:0 24px;background:#f4f3ef;color:#1f2933;font:16px/1.7 system-ui,sans-serif}h1{font-size:28px}h2{font:18px SimHei,serif;text-align:center;font-weight:normal}section{background:white;padding:24px;margin:26px 0;border:1px solid #e3e0d8}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;border-top:.75pt solid black;border-bottom:.75pt solid black;font:12px/1.55 "Times New Roman",SimSun,serif}th{border-bottom:.5pt solid black;font-weight:normal}td,th{padding:8px 10px;text-align:center;vertical-align:top}.column-groups th{border-bottom:0;padding-bottom:0}.column-groups span{display:block;border-bottom:.5pt solid black;padding-bottom:5px}td:first-child{text-align:left}.note{font-size:13px;color:#555}@media print{body{background:white}section{border:0}thead{display:table-header-group}tr{break-inside:avoid}}</style><h1>岩土论文表格预览</h1><p>'''+intro+'</p>'+''.join(sections)+'</html>'
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('input',type=Path);p.add_argument('--out',required=True,type=Path);a=p.parse_args()

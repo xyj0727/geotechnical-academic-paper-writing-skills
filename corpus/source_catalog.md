@@ -1,6 +1,6 @@
 # 来源与逐文件处理目录
 
-已登记 107 个 PDF、82 个独立字节文件；其中译文/翻译中间 PDF 26 个，原始来源 56 个。排除非论文发票 1 个，剩余 55 份论文/报告/学位来源。
+已登记 112 个 PDF、87 个独立字节文件；其中译文/翻译中间 PDF 26 个，经文本及图像证据确认的同内容版本 2 个，原始来源 59 个。排除非论文发票 1 个，剩余 58 份论文/报告/学位来源。
 
 P063 是原文与讨论/作者答复的拼接文件，因此这里报告来源文件数，不宣称严格的文章总篇数。
 
@@ -64,10 +64,13 @@ P063 是原文与讨论/作者答复的拼接文件，因此这里报告来源�
 | [P080](papers/P080.md) | 配电线路杆塔装配式基础研究 | 2024 | 硕士专业学位论文；靳柯，东北电力大学 | 93 | 93/0/10 | 阅读覆盖已记录 |
 | [P081](papers/P081.md) | Response of laterally loaded finned piles in sand | 2024卷期（online 2023-07-28） | 英文期刊；小尺度/足尺试验及弹塑性反演 | 22 | 22/0/6 | 阅读覆盖已记录 |
 | [P082](papers/P082.md) | Ground characterisation for PISA pile testing and analysis | 2020（online 2019） | 英文期刊；场地表征与本构参数证据整合 | 16 | 16/0/5 | 阅读覆盖已记录 |
+| [P083](papers/P083.md) | Failure modes and inclined bearing capacity of a modified suction caisson in sand | 2025 | 英文期刊；改型吸力筒模型试验与数值模拟；模式分类、响应分项与加载速率效应 | 14 | 14/14/14 | 阅读覆盖已记录 |
+| [P085](papers/P085.md) | 一种加装稳定翼的海上风电负压桶型基础研究 | 2012 | 中文期刊；改型基础构造说明与静动力响应比较 | 6 | 6/0/6 | 阅读覆盖已记录 |
+| [P086](papers/P086.md) | 单筒吸力桩基础H-M不排水承载力包络线研究 | 2026 | 中文期刊；不排水H-M包络线机制解释与理论-数值比较 | 11 | 11/0/8 | 阅读覆盖已记录 |
 
 ## PDF 文件逐项映射
 
-字节重复沿清单中的 `duplicate_of` 追溯，译文再映射到对应原文；译文或重复项只继承原文阅读状态，不声称逐份重新阅读。
+字节重复沿清单中的 `duplicate_of` 追溯；同内容版本须有全文文字与逐页像素一致证据，或仅针对精确文件散列的人工审核记录。译文单独映射到对应原文，同内容版本不算译本。译文或重复项只继承原文阅读状态，不声称逐份重新阅读。
 
 | 文件键 | 源目录相对路径 | 字节文件 ID | 原文 ID | 处理状态 | 原文阅读状态 |
 |---|---|---|---|---|---|
@@ -178,6 +181,11 @@ P063 是原文与讨论/作者答复的拼接文件，因此这里报告来源�
 | F105 | `validation_candidates/RodgersPender2008_NZGS_poles_Auckland_clay.pdf` | P076 | P076 | byte_duplicate_mapped | 阅读覆盖已记录 |
 | F106 | `validation_candidates/Zdravkovic2020_Geotechnique_PISA_Cowden_FE_modelling.pdf` | P043 | P043 | byte_duplicate_mapped | 阅读覆盖已记录 |
 | F107 | `validation_candidates/Zdravkovic2020_Geotechnique_PISA_ground_characterisation.pdf` | P082 | P082 | original_read_complete | 阅读覆盖已记录 |
+| F108 | `other/1-s2.0-S0141118725000045-main.pdf` | P083 | P083 | original_read_complete | 阅读覆盖已记录 |
+| F109 | `other/1-s2.0-S0141118725000045-main_2.pdf` | P084 | P083 | content_duplicate_mapped | 阅读覆盖已记录 |
+| F110 | `other/一种加装稳定翼的海上风电负压桶型基础研究_李炜.pdf` | P085 | P085 | original_read_complete | 阅读覆盖已记录 |
+| F111 | `other/单筒吸力桩基础H-M不排水承载力包络线研究_董小钰.pdf` | P086 | P086 | original_read_complete | 阅读覆盖已记录 |
+| F112 | `other/单筒吸力桩基础H-M不排水承载力包络线研究_董小钰_2.pdf` | P087 | P086 | content_duplicate_mapped | 阅读覆盖已记录 |
 
 ## 非 PDF 辅助文件
 
@@ -185,73 +193,75 @@ P063 是原文与讨论/作者答复的拼接文件，因此这里报告来源�
 
 | 文件键 | 源目录相对路径 | 类别 | 原文 ID | 状态/处理依据 |
 |---|---|---|---|---|
-| F108 | `gge/annotated/Babu2025_validation_p4.png` | figure_or_page_image | P015 | 文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。 |
-| F109 | `gge/annotated/Babu2025_validation_p5.png` | figure_or_page_image | P015 | 文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。 |
-| F110 | `gge/annotated/Babu2025_validation_p6.png` | figure_or_page_image | P015 | 文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。 |
-| F111 | `gge/translation/chunks/020-01254-0_part0.jsonl` | translation_intermediate | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
-| F112 | `gge/translation/chunks/020-01254-0_part0.out.jsonl` | translation_intermediate | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
-| F113 | `gge/translation/chunks/020-01534-9_part0.jsonl` | translation_intermediate | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
-| F114 | `gge/translation/chunks/020-01534-9_part0.out.jsonl` | translation_intermediate | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
-| F115 | `gge/translation/chunks/022-02075-z_part0.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F116 | `gge/translation/chunks/022-02075-z_part0.out.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F117 | `gge/translation/chunks/022-02075-z_part1.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F118 | `gge/translation/chunks/022-02075-z_part1.out.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F119 | `gge/translation/chunks/022-02075-z_part2.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F120 | `gge/translation/chunks/022-02075-z_part2.out.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F121 | `gge/translation/chunks/023-02421-9_part0.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
-| F122 | `gge/translation/chunks/023-02421-9_part0.out.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
-| F123 | `gge/translation/chunks/023-02421-9_part1.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
-| F124 | `gge/translation/chunks/023-02421-9_part1.out.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
-| F125 | `gge/translation/chunks/024-02757-w_part0.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
-| F126 | `gge/translation/chunks/024-02757-w_part0.out.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
-| F127 | `gge/translation/chunks/024-02757-w_part1.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
-| F128 | `gge/translation/chunks/024-02757-w_part1.out.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
-| F129 | `gge/translation/chunks/024-02822-4_part0.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
-| F130 | `gge/translation/chunks/024-02822-4_part0.out.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
-| F131 | `gge/translation/chunks/024-02822-4_part1.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
-| F132 | `gge/translation/chunks/024-02822-4_part1.out.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
-| F133 | `gge/translation/chunks/GLOSSARY.md` | supporting_note | 不适用 | 辅助文件，不作为新增论文；仅登记文件身份，未声称重新核对其中全部内容。 |
-| F134 | `gge/translation/GGE_s10706-020-01254-0/capture.log` | process_log | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
-| F135 | `gge/translation/GGE_s10706-020-01254-0/render.log` | process_log | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
-| F136 | `gge/translation/GGE_s10706-020-01254-0/translations.jsonl` | translation_intermediate | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
-| F137 | `gge/translation/GGE_s10706-020-01254-0/units.jsonl` | translation_intermediate | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
-| F138 | `gge/translation/GGE_s10706-020-01534-9/capture.log` | process_log | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
-| F139 | `gge/translation/GGE_s10706-020-01534-9/render.log` | process_log | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
-| F140 | `gge/translation/GGE_s10706-020-01534-9/translations.jsonl` | translation_intermediate | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
-| F141 | `gge/translation/GGE_s10706-020-01534-9/units.jsonl` | translation_intermediate | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
-| F142 | `gge/translation/GGE_s10706-022-02075-z/capture.log` | process_log | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F143 | `gge/translation/GGE_s10706-022-02075-z/render.log` | process_log | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F144 | `gge/translation/GGE_s10706-022-02075-z/translations.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F145 | `gge/translation/GGE_s10706-022-02075-z/units.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F146 | `gge/translation/GGE_s10706-023-02421-9/capture.log` | process_log | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
-| F147 | `gge/translation/GGE_s10706-023-02421-9/render.log` | process_log | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
-| F148 | `gge/translation/GGE_s10706-023-02421-9/translations.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
-| F149 | `gge/translation/GGE_s10706-023-02421-9/units.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
-| F150 | `gge/translation/GGE_s10706-024-02757-w/capture.log` | process_log | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
-| F151 | `gge/translation/GGE_s10706-024-02757-w/render.log` | process_log | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
-| F152 | `gge/translation/GGE_s10706-024-02757-w/translations.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
-| F153 | `gge/translation/GGE_s10706-024-02757-w/units.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
-| F154 | `gge/translation/GGE_s10706-024-02822-4/capture.log` | process_log | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
-| F155 | `gge/translation/GGE_s10706-024-02822-4/translations.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
-| F156 | `gge/translation/GGE_s10706-024-02822-4/units.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
-| F157 | `gge/txt/GGE_s10706-020-01254-0.txt` | extracted_text | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
-| F158 | `gge/txt/GGE_s10706-020-01534-9.txt` | extracted_text | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
-| F159 | `gge/txt/GGE_s10706-022-02075-z.txt` | extracted_text | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
-| F160 | `gge/txt/GGE_s10706-023-02421-9.txt` | extracted_text | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
-| F161 | `gge/txt/GGE_s10706-024-02757-w.txt` | extracted_text | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
-| F162 | `gge/txt/GGE_s10706-024-02822-4.txt` | extracted_text | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
-| F163 | `gge/txt/GGE_s10706-024-03048-0_Babu2025_sample.txt` | extracted_text | P015 | 文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。 |
-| F164 | `other/perimeter pile groups/idea.docx` | research_proposal | 不适用 | 主代理已使用 OfficeCLI 确认为研究设想；不是新增论文，不计入论文精读数量。 |
-| F165 | `other/perimeter pile groups/Untitled project.g3x` | external_project | 不适用 | 外部项目文件，不是论文；未运行或验证项目内容。 |
-| F166 | `validation/Bienen2012_JGGE_piles_with_wings.txt` | extracted_text | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
-| F167 | `validation/bienen2012_S1_1aM_fig6a.csv` | derived_curve_data | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
-| F168 | `validation/bienen2012_S1_1aW_fig6a.csv` | derived_curve_data | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
-| F169 | `validation/bienen2012_S2_1M_fig9.csv` | derived_curve_data | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
-| F170 | `validation/bienen2012_S2_1W_fig9.csv` | derived_curve_data | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
-| F171 | `validation/bienen_p7.png` | figure_or_page_image | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
-| F172 | `validation/Sakr2020_AJG_single_finned_piles_clay.txt` | extracted_text | P061 | 文件名/所在目录映射到 P061 的派生材料；不作为独立来源，未据此重复计数。 |
-| F173 | `validation_candidates/candidates.md` | supporting_note | 不适用 | 辅助文件，不作为新增论文；仅登记文件身份，未声称重新核对其中全部内容。 |
+| F113 | `gge/annotated/Babu2025_validation_p4.png` | figure_or_page_image | P015 | 文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。 |
+| F114 | `gge/annotated/Babu2025_validation_p5.png` | figure_or_page_image | P015 | 文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。 |
+| F115 | `gge/annotated/Babu2025_validation_p6.png` | figure_or_page_image | P015 | 文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。 |
+| F116 | `gge/translation/chunks/020-01254-0_part0.jsonl` | translation_intermediate | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
+| F117 | `gge/translation/chunks/020-01254-0_part0.out.jsonl` | translation_intermediate | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
+| F118 | `gge/translation/chunks/020-01534-9_part0.jsonl` | translation_intermediate | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
+| F119 | `gge/translation/chunks/020-01534-9_part0.out.jsonl` | translation_intermediate | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
+| F120 | `gge/translation/chunks/022-02075-z_part0.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F121 | `gge/translation/chunks/022-02075-z_part0.out.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F122 | `gge/translation/chunks/022-02075-z_part1.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F123 | `gge/translation/chunks/022-02075-z_part1.out.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F124 | `gge/translation/chunks/022-02075-z_part2.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F125 | `gge/translation/chunks/022-02075-z_part2.out.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F126 | `gge/translation/chunks/023-02421-9_part0.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
+| F127 | `gge/translation/chunks/023-02421-9_part0.out.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
+| F128 | `gge/translation/chunks/023-02421-9_part1.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
+| F129 | `gge/translation/chunks/023-02421-9_part1.out.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
+| F130 | `gge/translation/chunks/024-02757-w_part0.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
+| F131 | `gge/translation/chunks/024-02757-w_part0.out.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
+| F132 | `gge/translation/chunks/024-02757-w_part1.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
+| F133 | `gge/translation/chunks/024-02757-w_part1.out.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
+| F134 | `gge/translation/chunks/024-02822-4_part0.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
+| F135 | `gge/translation/chunks/024-02822-4_part0.out.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
+| F136 | `gge/translation/chunks/024-02822-4_part1.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
+| F137 | `gge/translation/chunks/024-02822-4_part1.out.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
+| F138 | `gge/translation/chunks/GLOSSARY.md` | supporting_note | 不适用 | 辅助文件，不作为新增论文；仅登记文件身份，未声称重新核对其中全部内容。 |
+| F139 | `gge/translation/GGE_s10706-020-01254-0/capture.log` | process_log | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
+| F140 | `gge/translation/GGE_s10706-020-01254-0/render.log` | process_log | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
+| F141 | `gge/translation/GGE_s10706-020-01254-0/translations.jsonl` | translation_intermediate | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
+| F142 | `gge/translation/GGE_s10706-020-01254-0/units.jsonl` | translation_intermediate | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
+| F143 | `gge/translation/GGE_s10706-020-01534-9/capture.log` | process_log | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
+| F144 | `gge/translation/GGE_s10706-020-01534-9/render.log` | process_log | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
+| F145 | `gge/translation/GGE_s10706-020-01534-9/translations.jsonl` | translation_intermediate | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
+| F146 | `gge/translation/GGE_s10706-020-01534-9/units.jsonl` | translation_intermediate | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
+| F147 | `gge/translation/GGE_s10706-022-02075-z/capture.log` | process_log | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F148 | `gge/translation/GGE_s10706-022-02075-z/render.log` | process_log | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F149 | `gge/translation/GGE_s10706-022-02075-z/translations.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F150 | `gge/translation/GGE_s10706-022-02075-z/units.jsonl` | translation_intermediate | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F151 | `gge/translation/GGE_s10706-023-02421-9/capture.log` | process_log | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
+| F152 | `gge/translation/GGE_s10706-023-02421-9/render.log` | process_log | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
+| F153 | `gge/translation/GGE_s10706-023-02421-9/translations.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
+| F154 | `gge/translation/GGE_s10706-023-02421-9/units.jsonl` | translation_intermediate | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
+| F155 | `gge/translation/GGE_s10706-024-02757-w/capture.log` | process_log | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
+| F156 | `gge/translation/GGE_s10706-024-02757-w/render.log` | process_log | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
+| F157 | `gge/translation/GGE_s10706-024-02757-w/translations.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
+| F158 | `gge/translation/GGE_s10706-024-02757-w/units.jsonl` | translation_intermediate | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
+| F159 | `gge/translation/GGE_s10706-024-02822-4/capture.log` | process_log | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
+| F160 | `gge/translation/GGE_s10706-024-02822-4/translations.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
+| F161 | `gge/translation/GGE_s10706-024-02822-4/units.jsonl` | translation_intermediate | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
+| F162 | `gge/txt/GGE_s10706-020-01254-0.txt` | extracted_text | P009 | 文件名/所在目录映射到 P009 的派生材料；不作为独立来源，未据此重复计数。 |
+| F163 | `gge/txt/GGE_s10706-020-01534-9.txt` | extracted_text | P010 | 文件名/所在目录映射到 P010 的派生材料；不作为独立来源，未据此重复计数。 |
+| F164 | `gge/txt/GGE_s10706-022-02075-z.txt` | extracted_text | P011 | 文件名/所在目录映射到 P011 的派生材料；不作为独立来源，未据此重复计数。 |
+| F165 | `gge/txt/GGE_s10706-023-02421-9.txt` | extracted_text | P012 | 文件名/所在目录映射到 P012 的派生材料；不作为独立来源，未据此重复计数。 |
+| F166 | `gge/txt/GGE_s10706-024-02757-w.txt` | extracted_text | P013 | 文件名/所在目录映射到 P013 的派生材料；不作为独立来源，未据此重复计数。 |
+| F167 | `gge/txt/GGE_s10706-024-02822-4.txt` | extracted_text | P014 | 文件名/所在目录映射到 P014 的派生材料；不作为独立来源，未据此重复计数。 |
+| F168 | `gge/txt/GGE_s10706-024-03048-0_Babu2025_sample.txt` | extracted_text | P015 | 文件名/所在目录映射到 P015 的派生材料；不作为独立来源，未据此重复计数。 |
+| F169 | `other/perimeter pile groups/idea.docx` | research_proposal | 不适用 | 主代理已使用 OfficeCLI 确认为研究设想；不是新增论文，不计入论文精读数量。 |
+| F170 | `other/perimeter pile groups/Untitled project.g3x` | external_project | 不适用 | 外部项目文件，不是论文；未运行或验证项目内容。 |
+| F171 | `validation/Bienen2012_JGGE_piles_with_wings.txt` | extracted_text | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
+| F172 | `validation/bienen2012_S1_1aM_fig6a.csv` | derived_curve_data | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
+| F173 | `validation/bienen2012_S1_1aW_fig6a.csv` | derived_curve_data | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
+| F174 | `validation/bienen2012_S2_1M_fig9.csv` | derived_curve_data | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
+| F175 | `validation/bienen2012_S2_1W_fig9.csv` | derived_curve_data | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
+| F176 | `validation/bienen_p7.png` | figure_or_page_image | P046 | 文件名/所在目录映射到 P046 的派生材料；不作为独立来源，未据此重复计数。 |
+| F177 | `validation/Sakr2020_AJG_single_finned_piles_clay.txt` | extracted_text | P061 | 文件名/所在目录映射到 P061 的派生材料；不作为独立来源，未据此重复计数。 |
+| F178 | `validation_candidates/candidates.md` | supporting_note | 不适用 | 辅助文件，不作为新增论文；仅登记文件身份，未声称重新核对其中全部内容。 |
 
 ## 未完成或需补充的记录
 
 没有缺失的成对笔记，也没有未说明覆盖的 PDF 页面。此结论只指逐页阅读记录完整，不表示全部图表均已逐图视觉审查。
+
+本轮另有 1 个目录中的 PDF 尚未纳入清单，不计入以上覆盖数量；具体路径见 reading_manifest.json 的 unlisted_pdf_paths。

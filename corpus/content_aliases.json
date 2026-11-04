@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "aliases": [
+    {
+      "id": "P087",
+      "canonical_id": "P086",
+      "source_sha256": "0e5f0d424b8a13aa7a2250d0a6da731781c7fd21dd3d159e427774fe30e2c6f8",
+      "canonical_sha256": "df8db2f86920ebd62e1ae1ea18aa2555ab28fb4652f1c49239c8dd2581facaee",
+      "review_status": "confirmed",
+      "reason": "两份文件全文规范化文字一致，11 页正文像素一致；页面差异仅为中国知网页脚水印的字体/URL。主代理实际查看两版 PDF 第 3 页确认差异性质。本映射仅适用于以上两个精确散列，不授权自动忽略其他 PDF 页脚。",
+      "visual_review": {
+        "reviewed_on": "2026-11-04",
+        "reviewer": "main_agent",
+        "visually_inspected_pdf_pages": [3],
+        "render_dpi": 144,
+        "colorspace": "RGB",
+        "alpha": false,
+        "page_count": 11,
+        "machine_compared_pdf_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        "all_page_sizes_points": [612.280029296875, 858.9000244140625],
+        "all_page_difference_bboxes_pixels": [42, 1657, 410, 1683],
+        "body_comparison_excluded_bottom_pixels": 75,
+        "all_page_body_pixels_equal": true,
+        "all_page_differences_confined_to_footer": true,
+        "scope_note": "正文一致来自逐页机器像素核对；视觉阅读页数只记录实际查看的第 3 页，不将 11 页机器比对表述为人工逐页阅读。"
+      }
+    }
+  ]
+}

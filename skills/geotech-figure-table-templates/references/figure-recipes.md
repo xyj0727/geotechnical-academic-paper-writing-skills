@@ -13,6 +13,8 @@
 
 ## 配色与标记
 
+同一数据契约还提供两个组合图样：`mode-rate-matrix`（沿用 parametric 图型）与 `envelope-theory-check`（沿用 interaction 图型）。来源观察、统一坐标与固定编码的适用条件见 [mode-envelope-styles.md](mode-envelope-styles.md)。它们扩展图样，不增加新的物理数据或自动拟合功能。
+
 本库同时出现黑白线型、灰度柱、少量彩色和软件云图，没有单一统一风格。迁移为两套实现：
 
 - `mono`：黑/灰线、圆/方/三角/菱形与虚实线，适合黑白印刷。

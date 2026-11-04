@@ -13,6 +13,8 @@ import json
 from pathlib import Path
 import re
 
+from inventory_corpus import source_files
+
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUT = ROOT / '.work' / 'readings'
@@ -35,6 +37,64 @@ STATUS_ZH = {
 
 def read_json(path: Path):
     return json.loads(path.read_text(encoding='utf-8'))
+
+
+def content_relations(byte_rows: dict, aliases_path: Path) -> tuple[dict, dict]:
+    """Validate exact automatic copies and explicitly reviewed, hash-bound aliases."""
+    relations, evidence = {}, {}
+    for ident, row in byte_rows.items():
+        if row.get('status') != 'content_duplicate':
+            continue
+        target = row.get('duplicate_of')
+        item = row.get('content_duplicate_evidence', {})
+        if target not in byte_rows:
+            raise ValueError(f'{ident}: unknown content-duplicate target')
+        original = byte_rows[target]
+        page_hashes = item.get('page_render_sha256', [])
+        if (item.get('method') != 'normalized_text_and_page_pixels'
+                or item.get('source_sha256') != row['sha256']
+                or item.get('target_sha256') != original['sha256']
+                or not row.get('text_sha256') or row['text_sha256'] != original.get('text_sha256')
+                or row.get('pages') != original.get('pages')
+                or len(page_hashes) != row.get('pages') or not page_hashes
+                or page_hashes != item.get('target_page_render_sha256')
+                or item.get('render_dpi') != 144 or item.get('colorspace') != 'RGB'
+                or item.get('alpha') is not False):
+            raise ValueError(f'{ident}: incomplete or inconsistent exact-content evidence')
+        relations[ident], evidence[ident] = target, item
+    if aliases_path.exists():
+        aliases = read_json(aliases_path)
+        if aliases.get('schema_version') != 1:
+            raise ValueError('Unsupported content_aliases schema')
+        seen = set()
+        for item in aliases.get('aliases', []):
+            ident, target = item.get('id'), item.get('canonical_id')
+            if ident in seen or ident not in byte_rows or target not in byte_rows or ident == target:
+                raise ValueError(f'{ident}: invalid or repeated reviewed alias')
+            seen.add(ident)
+            row, original = byte_rows[ident], byte_rows[target]
+            if (item.get('source_sha256') != row['sha256']
+                    or item.get('canonical_sha256') != original['sha256']
+                    or not row.get('text_sha256') or row['text_sha256'] != original.get('text_sha256')
+                    or item.get('review_status') != 'confirmed' or not item.get('reason')
+                    or not item.get('visual_review')):
+                raise ValueError(f'{ident}: reviewed alias lacks matching hashes or confirmed visual evidence')
+            if ident in relations and relations[ident] != target:
+                raise ValueError(f'{ident}: conflicting content alias')
+            relations[ident], evidence[ident] = target, item
+    if set(relations) & set(TRANSLATIONS):
+        raise ValueError('A content duplicate must not also be classified as a translation')
+    return relations, evidence
+
+
+def relation_chain(ident: str, relations: dict) -> list[str]:
+    chain = [ident]
+    while chain[-1] in relations:
+        target = relations[chain[-1]]
+        if target in chain:
+            raise ValueError(f'Cycle in source mapping: {chain + [target]}')
+        chain.append(target)
+    return chain
 
 
 def write(path: Path, content: str):
@@ -106,6 +166,8 @@ def make_source(row: dict) -> tuple[dict, str]:
         'source_sha256': row['sha256'], 'pages': row.get('pages', 0),
         'composite_source': ident == 'P063',
     }
+    if type(common['pages']) is not int or common['pages'] < 0:
+        raise ValueError(f'{ident}: file_manifest pages must be a nonnegative integer')
     if ident in EXCLUDED:
         return {**common, 'title': '非论文电子发票（已排除）', 'year': None,
                 'kind': '非论文', 'reading_status': 'excluded_nonpaper',
@@ -129,7 +191,10 @@ def make_source(row: dict) -> tuple[dict, str]:
     accounted = set(pages['read_text_pages']) | set(pages['read_visual_text_pages']) | set(pages['blank_or_separator_pages'])
     unaccounted = sorted(set(range(1, common['pages'] + 1)) - accounted)
     status = 'read_complete' if not unaccounted else 'read_partial'
-    return {**common, **data, **pages, 'reading_status': status,
+    # Bibliographic metadata may include a printed page range. Identity, PDF page
+    # count and provenance always come from file_manifest, never reading-note JSON.
+    metadata = {key: value for key, value in data.items() if key not in common}
+    return {**common, **metadata, **pages, 'reading_status': status,
             'unaccounted_pages': unaccounted,
             'note_sha256': digest(note), 'coverage_record_sha256': digest(json_path.read_text(encoding='utf-8')),
             'complete_note': f'papers/{ident}.md'}, note
@@ -242,7 +307,8 @@ def atlas(kind: str, sources: list[dict], summary: dict) -> str:
 def catalog(sources: list[dict], files: list[dict], summary: dict) -> str:
     lines = ['# 来源与逐文件处理目录', '',
              f"已登记 {summary['pdf_files']} 个 PDF、{summary['unique_pdf_byte_files']} 个独立字节文件；"
-             f"其中译文/翻译中间 PDF {summary['translation_derivative_byte_files']} 个，原始来源 {summary['original_source_byte_files']} 个。"
+             f"其中译文/翻译中间 PDF {summary['translation_derivative_byte_files']} 个，"
+             f"经文本及图像证据确认的同内容版本 {summary['content_duplicate_byte_files']} 个，原始来源 {summary['original_source_byte_files']} 个。"
              f"排除非论文发票 {summary['excluded_nonpaper_source_files']} 个，剩余 {summary['paper_report_thesis_source_files']} 份论文/报告/学位来源。", '',
              'P063 是原文与讨论/作者答复的拼接文件，因此这里报告来源文件数，不宣称严格的文章总篇数。', '',
              '## 原始来源及完整笔记', '',
@@ -254,7 +320,7 @@ def catalog(sources: list[dict], files: list[dict], summary: dict) -> str:
         count = f"{len(source.get('read_text_pages', []))}/{len(source.get('read_visual_text_pages', []))}/{len(source.get('visual_pages', []))}"
         lines.append(f"| {ref} | {cell(source['title'])} | {cell(source.get('year'))} | {cell(source['kind'])} | {source['pages']} | {count} | {STATUS_ZH[source['reading_status']]} |")
     lines += ['', '## PDF 文件逐项映射', '',
-             '字节重复沿清单中的 `duplicate_of` 追溯，译文再映射到对应原文；译文或重复项只继承原文阅读状态，不声称逐份重新阅读。', '',
+             '字节重复沿清单中的 `duplicate_of` 追溯；同内容版本须有全文文字与逐页像素一致证据，或仅针对精确文件散列的人工审核记录。译文单独映射到对应原文，同内容版本不算译本。译文或重复项只继承原文阅读状态，不声称逐份重新阅读。', '',
              '| 文件键 | 源目录相对路径 | 字节文件 ID | 原文 ID | 处理状态 | 原文阅读状态 |',
              '|---|---|---|---|---|---|']
     for item in files:
@@ -275,14 +341,20 @@ def catalog(sources: list[dict], files: list[dict], summary: dict) -> str:
         lines.append('没有缺失的成对笔记，也没有未说明覆盖的 PDF 页面。此结论只指逐页阅读记录完整，不表示全部图表均已逐图视觉审查。')
     for source in attention:
         lines.append(f"- {source['id']}：{STATUS_ZH[source['reading_status']]}；尚未说明覆盖页 {page_ranges(source.get('unaccounted_pages', []))}；缺少文件 {', '.join(source.get('missing_note_files', [])) or '无'}。")
+    if summary['unlisted_pdf_files']:
+        lines += ['', f"本轮另有 {summary['unlisted_pdf_files']} 个目录中的 PDF 尚未纳入清单，不计入以上覆盖数量；具体路径见 reading_manifest.json 的 unlisted_pdf_paths。"]
     lines.append('')
     return '\n'.join(lines)
 
 
-def main() -> int:
+def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--strict', action='store_true', help='return nonzero for pending notes or unaccounted PDF pages')
-    args = parser.parse_args()
+    parser.add_argument('--allow-unlisted-pdfs', action='store_true',
+                        help='allow and explicitly report new PDFs outside the selected inventory scope')
+    parser.add_argument('--exclude-dir', action='append', default=[],
+                        help='explicit source-relative review-output directory to skip (repeatable)')
+    args = parser.parse_args(argv)
     inventory = read_json(ROOT / 'corpus' / 'file_manifest.json')
     byte_rows = {row['id']: row for row in inventory if row.get('id')}
     if len(byte_rows) != sum(bool(row.get('id')) for row in inventory):
@@ -290,7 +362,10 @@ def main() -> int:
     unknown = set(TRANSLATIONS) - set(byte_rows)
     if unknown or set(TRANSLATIONS.values()) - set(byte_rows):
         raise ValueError(f'Translation mapping does not match file inventory: {sorted(unknown)}')
-    source_ids = sorted(set(byte_rows) - set(TRANSLATIONS))
+    content_aliases, content_evidence = content_relations(byte_rows, ROOT / 'corpus' / 'content_aliases.json')
+    relations = {**TRANSLATIONS, **content_aliases}
+    chains = {ident: relation_chain(ident, relations) for ident in byte_rows}
+    source_ids = sorted(set(byte_rows) - set(relations))
     sources, notes = [], {}
     for ident in source_ids:
         source, note = make_source(byte_rows[ident])
@@ -302,34 +377,44 @@ def main() -> int:
         byte_id = row.get('id') or row.get('duplicate_of')
         if byte_id not in byte_rows:
             raise ValueError(f"Unknown duplicate target: {row['path']}")
-        if row.get('duplicate_of') and row['sha256'] != byte_rows[byte_id]['sha256']:
+        is_byte_duplicate = not bool(row.get('id'))
+        if is_byte_duplicate and row['sha256'] != byte_rows[byte_id]['sha256']:
             raise ValueError(f"Byte duplicate hash mismatch: {row['path']}")
-        canonical = TRANSLATIONS.get(byte_id, byte_id)
+        chain = chains[byte_id]
+        canonical = chain[-1]
         reading_status = by_id[canonical]['reading_status']
-        status = ('byte_duplicate_mapped' if row.get('duplicate_of') else
+        status = ('byte_duplicate_mapped' if is_byte_duplicate else
+                  'content_duplicate_mapped' if byte_id in content_aliases else
                   'translation_derivative_mapped' if byte_id in TRANSLATIONS else
                   'excluded_nonpaper' if canonical in EXCLUDED else 'original_' + reading_status)
         files.append({'path': row['path'], 'format': 'pdf', 'bytes': row['bytes'], 'sha256': row['sha256'],
                       'byte_source_id': byte_id, 'canonical_id': canonical,
                       'processing_status': status, 'canonical_reading_status': reading_status,
-                      'relation_chain': [byte_id] if byte_id == canonical else [byte_id, canonical],
-                      'byte_duplicate': bool(row.get('duplicate_of')),
-                      'translation_derivative': byte_id in TRANSLATIONS,
+                      'relation_chain': chain,
+                      'byte_duplicate': is_byte_duplicate,
+                      'content_duplicate': any(ident in content_aliases for ident in chain),
+                      'translation_derivative': any(ident in TRANSLATIONS for ident in chain),
                       'pages': byte_rows[byte_id].get('pages')})
     if not SOURCE.exists():
         raise FileNotFoundError(f'Local source directory is required for complete auxiliary inventory: {SOURCE}')
-    source_pdf_paths = {p.relative_to(SOURCE).as_posix() for p in SOURCE.rglob('*') if p.is_file() and p.suffix.lower() == '.pdf'}
-    if source_pdf_paths != {row['path'] for row in inventory}:
-        raise ValueError('PDF filenames changed since inventory; refresh and reconcile file_manifest first')
-    for path in sorted(SOURCE.rglob('*'), key=lambda p: str(p).lower()):
-        if path.is_file() and path.suffix.lower() != '.pdf':
+    visible_files = source_files(SOURCE, args.exclude_dir)
+    source_pdf_paths = {p.relative_to(SOURCE).as_posix() for p in visible_files if p.suffix.lower() == '.pdf'}
+    listed_paths = {row['path'] for row in inventory}
+    missing_paths = sorted(listed_paths - source_pdf_paths)
+    unlisted_paths = sorted(source_pdf_paths - listed_paths)
+    if missing_paths or (unlisted_paths and not args.allow_unlisted_pdfs):
+        raise ValueError(f'PDF filenames changed since inventory; missing={missing_paths}; unlisted={unlisted_paths}. '
+                         'Refresh/reconcile inventory, or explicitly allow unlisted PDFs outside this review scope.')
+    for path in visible_files:
+        if path.suffix.lower() != '.pdf':
             files.append(auxiliary_record(path, byte_rows))
     for index, item in enumerate(files, 1):
         item['file_key'] = f'F{index:03d}'
     papers = [s for s in sources if s['id'] not in EXCLUDED]
     summary = {
         'pdf_files': len(inventory), 'unique_pdf_byte_files': len(byte_rows),
-        'byte_duplicate_pdf_files': sum(bool(r.get('duplicate_of')) for r in inventory),
+        'byte_duplicate_pdf_files': sum(not bool(r.get('id')) for r in inventory),
+        'content_duplicate_byte_files': len(content_aliases),
         'translation_derivative_byte_files': len(TRANSLATIONS),
         'original_source_byte_files': len(sources), 'excluded_nonpaper_source_files': len(EXCLUDED),
         'paper_report_thesis_source_files': len(papers),
@@ -342,6 +427,7 @@ def main() -> int:
         'visual_pages_recorded': sum(len(s.get('visual_pages', [])) for s in papers),
         'blank_or_separator_pages_recorded': sum(len(s.get('blank_or_separator_pages', [])) for s in papers),
         'auxiliary_files': len(files) - len(inventory), 'all_files': len(files),
+        'unlisted_pdf_files': len(unlisted_paths),
         'auxiliary_formats': dict(sorted(Counter(f['format'] for f in files if f['format'] != 'pdf').items())),
     }
     for source in papers:
@@ -364,7 +450,11 @@ def main() -> int:
         'schema_version': 1, 'scope': 'local_source_files_and_original_reading_notes',
         'page_numbering': 'one_based_pdf_pages', 'summary': summary,
         'translation_to_original': TRANSLATIONS,
-        'counting_note': '55份论文/报告/学位原始来源文件；P063包含原文及讨论答复，来源数不等于严格文章篇数。',
+        'content_duplicate_to_original': content_aliases,
+        'content_duplicate_evidence': content_evidence,
+        'unlisted_pdf_paths': unlisted_paths,
+        'excluded_auxiliary_directories': args.exclude_dir,
+        'counting_note': f"{len(papers)}份论文/报告/学位原始来源文件；P063包含原文及讨论答复，来源数不等于严格文章篇数。",
         'coverage_note': 'read_complete只表示文本/图像文字/空白分隔页已解释全部PDF页；visual_pages另记实际图表检查，不表示重推全部公式或核实全部参考文献。',
         'sources': sources, 'files': files,
     }
